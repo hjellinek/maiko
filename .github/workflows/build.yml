@@ -56,12 +56,10 @@ jobs:
   build-docker:
     name: Build Maiko Docker container
     description: Build the Maiko Docker container
-    runs:
-      using: 'docker'
-      image: 'Dockerfile'
-    steps:
-      - name: Build it
-        run: docker Dockerfile
+    runs-on: ubuntu-latest
+    uses: maiko/build-maiko-docker-container@v1
+    command: |
+        echo hello
 
   push-to-registry:
     name: 'Push Docker image to Docker Hub'
