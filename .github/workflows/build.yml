@@ -75,4 +75,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags:interlisp/maiko:latest
+          tags: interlisp/maiko:latest
