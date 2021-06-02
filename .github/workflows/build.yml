@@ -59,7 +59,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build Docker image
-        run: docker build
+        run: docker build .
 
   push-to-registry:
     name: 'Push Docker image to Docker Hub'
