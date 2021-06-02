@@ -57,9 +57,10 @@ jobs:
     name: Build Maiko Docker container
     description: Build the Maiko Docker container
     runs-on: ubuntu-latest
-    uses: maiko/build-maiko-docker-container@v1
-    command: |
-        echo hello
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Docker image
+        run: docker build
 
   push-to-registry:
     name: 'Push Docker image to Docker Hub'
