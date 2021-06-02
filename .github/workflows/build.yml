@@ -55,7 +55,6 @@ jobs:
 
   build-docker:
     name: Build Maiko Docker container
-    description: Build the Maiko Docker container
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
