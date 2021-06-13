@@ -78,6 +78,8 @@ jobs:
         working-directory: ${{github.workspace}}/build
         shell: bash
         run: pwd; ls -l
+      - name: Build type
+        run: echo Build type = $BUILD_TYPE
       - name: Build Docker image
         run: docker build .
 
