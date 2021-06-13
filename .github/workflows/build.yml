@@ -74,14 +74,12 @@ jobs:
         working-directory: ${{github.workspace}}
         shell: bash
         run: pwd; ls -l
-      - name: Check the build dir
+      - name: Find it
         working-directory: ${{github.workspace}}/build
         shell: bash
-        run: pwd; ls -l
-      - name: Build type
-        run: echo Build type = $BUILD_TYPE
-      - name: Build Docker image
-        run: docker build .
+        run: find . -name ldex
+#      - name: Build Docker image
+#        run: docker build .
 
   push-to-registry:
     name: 'Push Docker image to Docker Hub'
