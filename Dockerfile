@@ -1,20 +1,18 @@
 FROM ubuntu:focal
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN pwd
-RUN ls -l
+RUN echo EXES = $EXES
 
 WORKDIR /maiko
-COPY /maiko/maiko/build/lde /maiko/
-COPY /maiko/build/lde /maiko/
-COPY /build/lde /maiko/
-COPY /lde /maiko/
-COPY lde /maiko/
-COPY /home/runner/work/maiko/maiko/build/ldether /maiko/
-COPY maiko/build/ldex /maiko/
-COPY maiko/build/mkvdate /maiko/
-COPY maiko/build/setsout /maiko/
-COPY maiko/build/tstsout /maiko/
+COPY $EXES/lde /maiko/
+COPY $EXES/ldether /maiko/
+COPY $EXES/ldex /maiko/
+COPY $EXES/mkvdate /maiko/
+COPY $EXES/setsout /maiko/
+COPY $EXES/tstsout /maiko/
+
+RUN cd "$EXES"; pwd; ls -l
+
 
 RUN apt-get update && apt-get install -y libx11-dev
 
