@@ -2,7 +2,7 @@ FROM ubuntu:focal
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN mkdir /maiko
-ADD build/{lde*,mkvdate,setsout,tstsout} /maiko/
+COPY build/{lde*,mkvdate,setsout,tstsout} /maiko/
 
 RUN pwd
 RUN ls -l
