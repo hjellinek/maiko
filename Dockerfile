@@ -5,7 +5,7 @@ RUN pwd
 RUN ls -l
 
 RUN mkdir /maiko
-COPY build/{lde*,mkvdate,setsout,tstsout} /maiko/
+COPY maiko/build/{lde*,mkvdate,setsout,tstsout} /maiko/
 
 RUN apt-get update && apt-get install -y libx11-dev
 
