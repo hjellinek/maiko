@@ -5,7 +5,11 @@ RUN pwd
 RUN ls -l
 
 WORKDIR /maiko
-COPY /home/runner/work/maiko/maiko/build/lde /maiko/
+COPY /maiko/maiko/build/lde /maiko/
+COPY /maiko/build/lde /maiko/
+COPY /build/lde /maiko/
+COPY /lde /maiko/
+COPY lde /maiko/
 COPY /home/runner/work/maiko/maiko/build/ldether /maiko/
 COPY maiko/build/ldex /maiko/
 COPY maiko/build/mkvdate /maiko/
