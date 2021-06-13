@@ -6,6 +6,7 @@ RUN pwd
 RUN ls -l
 
 RUN mkdir /maiko
+WORKDIR build
 COPY lde ldether ldex mkvdate setsout tstsout /maiko
 
 FROM ubuntu:focal
