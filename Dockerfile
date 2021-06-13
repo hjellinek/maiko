@@ -1,19 +1,19 @@
-ARG exes
+ARG EXES
 
 FROM ubuntu:focal
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN echo HERE exes = ${exes}
+RUN echo HERE exes = ${EXES}
 
 WORKDIR /maiko
-COPY ${exes}/lde /maiko/
-COPY ${exes}/ldether /maiko/
-COPY ${exes}/ldex /maiko/
-COPY ${exes}/mkvdate /maiko/
-COPY ${exes}/setsout /maiko/
-COPY ${exes}/tstsout /maiko/
+COPY ${EXES}/lde /maiko/
+COPY ${EXES}/ldether /maiko/
+COPY ${EXES}/ldex /maiko/
+COPY ${EXES}/mkvdate /maiko/
+COPY ${EXES}/setsout /maiko/
+COPY ${EXES}/tstsout /maiko/
 
-RUN cd "${exes}"; pwd; ls -l
+RUN cd "${EXES}"; pwd; ls -l
 
 
 RUN apt-get update && apt-get install -y libx11-dev
