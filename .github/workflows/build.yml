@@ -78,8 +78,8 @@ jobs:
         working-directory: ${{github.workspace}}/build
         shell: bash
         run: ls -l; find . -name ldex -ls
-#      - name: Build Docker image
-#        run: docker build .
+      - name: Build Docker image
+        run: docker build .
 
   push-to-registry:
     name: 'Push Docker image to Docker Hub'
