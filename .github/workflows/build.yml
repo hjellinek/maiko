@@ -79,7 +79,7 @@ jobs:
         shell: bash
         run: pwd; ls -l; find . -name ldex -ls
       - name: Build Docker image
-        run: docker build .
+        run: docker--build-arg EXES="${{github.workspace}}/build"  build .
 
   push-to-registry:
     name: 'Push Docker image to Docker Hub'
