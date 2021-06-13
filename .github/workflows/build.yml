@@ -77,7 +77,7 @@ jobs:
       - name: Find it
         working-directory: ${{github.workspace}}/build
         shell: bash
-        run: ls -l; find . -name ldex -ls
+        run: pwd; ls -l; find . -name ldex -ls
       - name: Build Docker image
         run: docker build .
 
