@@ -4,8 +4,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN pwd
 RUN ls -l
 
-RUN mkdir /maiko
-COPY maiko/build/{lde*,mkvdate,setsout,tstsout} /maiko/
+WORKDIR /maiko
+COPY maiko/build/lde /maiko/
+COPY maiko/build/ldether /maiko/
+COPY maiko/build/ldex /maiko/
+COPY maiko/build/mkvdate /maiko/
+COPY maiko/build/setsout /maiko/
+COPY maiko/build/tstsout /maiko/
 
 RUN apt-get update && apt-get install -y libx11-dev
 
