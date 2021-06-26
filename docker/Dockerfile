@@ -1,7 +1,7 @@
 FROM ubuntu:focal
 
 COPY lde /maiko/
-COPY ldether /maiko/
+COPY ldeether /maiko/
 COPY ldex /maiko/
 COPY mkvdate /maiko/
 COPY setsout /maiko/
