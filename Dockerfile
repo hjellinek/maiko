@@ -1,3 +1,5 @@
+FROM ubuntu:focal
+
 ARG exes
 
 RUN echo "HERE exes = $exes"
@@ -12,7 +14,6 @@ COPY $exes/tstsout /maiko/
 
 RUN cd "$exes"; pwd; ls -l
 
-FROM ubuntu:focal
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y libx11-dev
