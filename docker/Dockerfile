@@ -7,10 +7,10 @@ COPY mkvdate /maiko/
 COPY setsout /maiko/
 COPY tstsout /maiko/
 
-RUN echo BEFORE; pwd; ls -l
+#RUN echo BEFORE; pwd; ls -l
 
-ENV DEBIAN_FRONTEND=noninteractive
+#ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y libx11-dev
 
-RUN echo AFTER;  pwd; ls -l /maiko
+#RUN echo ls -l /maiko
