@@ -13,4 +13,4 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y libx11-dev
 
-RUN echo AFTER;  pwd; ls -l
+RUN echo AFTER;  pwd; ls -l /maiko
