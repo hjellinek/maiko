@@ -79,6 +79,7 @@ jobs:
         shell: bash
         run: cp lde* mkvdate setsout tstsout ../docker/
       - name: Build Docker image
+        working-directory: ${{github.workspace}}/docker
         run: docker build .
 
   push-to-registry:
