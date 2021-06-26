@@ -75,7 +75,7 @@ jobs:
         shell: bash
         run: pwd; ls -l
       - name: Find it, copy ir
-        working-directory: ${{github.workspace}}/build2
+        working-directory: ${{github.workspace}}/build
         shell: bash
         run: cp lde* mkvdate setsout tstsout ../docker/
       - name: Build Docker image
