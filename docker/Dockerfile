@@ -1,11 +1,11 @@
 FROM ubuntu:focal
 
-COPY $exes/lde /maiko/
-COPY $exes/ldether /maiko/
-COPY $exes/ldex /maiko/
-COPY $exes/mkvdate /maiko/
-COPY $exes/setsout /maiko/
-COPY $exes/tstsout /maiko/
+COPY lde /maiko/
+COPY ldether /maiko/
+COPY ldex /maiko/
+COPY mkvdate /maiko/
+COPY setsout /maiko/
+COPY tstsout /maiko/
 
 RUN echo BEFORE; pwd; ls -l
 
