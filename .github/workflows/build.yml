@@ -79,7 +79,7 @@ jobs:
         shell: bash
         run: cp lde* mkvdate setsout tstsout ../docker/
       - name: Build Docker image
-        run: docker build --build-arg exes="${{github.workspace}}/build" .
+        run: docker build .
 
   push-to-registry:
     name: 'Push Docker image to Docker Hub'
