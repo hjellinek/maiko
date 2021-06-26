@@ -74,10 +74,10 @@ jobs:
         working-directory: ${{github.workspace}}
         shell: bash
         run: pwd; ls -l
-      - name: Find it
+      - name: Find it, copy ir
         working-directory: ${{github.workspace}}/build
         shell: bash
-        run: pwd; ls -l; find . -name ldex -exec ls -l {} \;
+        run: cp lde* mkvdate setsout tstsout ../docker/
       - name: Build Docker image
         run: docker build --build-arg exes="${{github.workspace}}/build" .
 
